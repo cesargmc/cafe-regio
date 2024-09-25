@@ -1,0 +1,58 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.servicio {
+
+    h3, .sucursal {
+        text-align: center;
+        color: v.$negro;
+    }
+
+    .sucursal { font-size: 3rem; }
+
+    .dia {
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    .complementos {
+        justify-content: center;
+        border: 1px #F7F7F8 solid;
+        border-radius: 2rem;
+        background-color: white;
+        width: 100%;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        .nombre-complemento { 
+            margin: 0;
+            padding-left: 1rem;
+            text-align: center;
+        }
+    }
+
+    a:last-child {
+        margin-bottom: 0
+    }
+}
+
+.escenarios-contenedor {
+    @include m.containerXL;
+
+    @include m.tablet {
+        @include m.grid(2);
+    }
+}
+
+.calendario {
+    @include m.resetear-lista;
+
+    li {
+        padding: 2.5rem;
+        font-weight: 700;
+        span { 
+            font-weight: 400;
+        }
+    }
+}
